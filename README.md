@@ -9,9 +9,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -22,7 +19,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -34,45 +30,36 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The following snakefile and supporting scripts are designed to process FASTQ files from CUT&Tag. Briefly they will perform the following:
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+* Initial quality check with FastQC and MultiQC.
+* Alignment with Bowtie2. Alignment parameters are based on the recommendation by Henikoff et.al.
+* File conversion, sorting, and indexing with samtools.
+* Removal of low quality reads (MAPQ<30).
+* Removal of reads mapped to blacklist region.
+* MACS2 peak calling.
+* 500k bin count matrix formation.
+* Reads normalization with TMM (normalization method from edgeR).
+* Coverage files generation (bigwig files)
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Steps involving quality filtering and normalization is done to correct for read depth and signal-to-noise ratio bias.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+!! IMPORTANT !!
+Reads duplicate removal with Picard is not done in this workflow as CUT&Tag duplicates are likely to be real reads.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Clone the repo to your local folder with:
+
+```sh
+git clone https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis.git
+
+or with SSH key
+
+git clone git@github.com:ZainulArifin1/CUTandTag-Primary-Analysis.git
+```
+
 
 ### Prerequisites
 
@@ -118,36 +105,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Commit the workflow to GitHub
+- [x] Full pipeline with minimum reproducible workflow
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+To customize the Snakefile for the CUT&Tag workflow, you can make adjustments based on the CUT&Tag tutorial available in this [website](https://yezhengstat.github.io/CUTTag_tutorial/).
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
@@ -166,6 +130,7 @@ Muhammad Zainul Arifin
 PhD Student, University College Dublin
 
 * Twitter: [@SaintZainn](https://twitter.com/SaintZainn)
+* Linkedin: [Muhammad Zainul Arifin](https://www.linkedin.com/in/muhammad-zainul-a-479aa1151/)
 * Email: muhammad.arifin@ucdconnect.ie
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
