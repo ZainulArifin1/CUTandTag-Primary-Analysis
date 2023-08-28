@@ -3,7 +3,7 @@
 
 <!-- TABLE OF CONTENTS -->
 
-<summary>Table of Contents</summary>
+<h3>Table of Contents</h3>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
