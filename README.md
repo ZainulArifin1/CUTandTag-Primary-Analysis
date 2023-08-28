@@ -14,6 +14,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
+    <li><a href="#references-download">References Download</li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
@@ -57,7 +58,7 @@ or with SSH key
 git clone git@github.com:ZainulArifin1/CUTandTag-Primary-Analysis.git
 ```
 
-### Prerequisites
+## Prerequisites
 
 To ensure a consistent and isolated environment for your bioinformatics project, you will need to install the required packages and libraries using either Conda or Mamba package managers. While both options are viable, I recommend using Mamba due to its superior speed and reliability.
 
@@ -106,18 +107,96 @@ conda activate bioinformatics
 * snakemake=6.0.5
 * snakemake-minimal=6.0.5
 
-Grab a tea or whatever you want because this going to take a while.
+Grab a tea or whatever you want while waiting because this going to take a while.
 
 <p align="center">
 <img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/kermit-the-frog-sip.gif">
 </p>
 
+<!-- DOWNLOAD REFERENCE -->
+## References Download
+
+Please note that the GitHub repository does not include the indexed hg38 reference file required for your bioinformatics analysis. You will need to download and prepare this reference file separately. Follow the steps below to obtain and set up the reference files:
+
+```
+wget ftp://ftp.ccb.jhu.edu/pub/data/bowtie_indexes/GRCh38_no_alt.zip
+```
+
+Do not forget to unzip the folder. Put the indexed references inside the folder "GRCh38_noalt_as".
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+If you have your FASTQ files ready, you must make sure first your folder is in the following format (**VERY IMPORTANT**).
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<p align="center">
+<img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/Folder_Order.png">
+</p>
+
+You can see the schematic below:
+
+```
+├── data
+│   ├── blacklist
+│   │   └── hg38-blacklist.v2.bed
+│   ├── raw_fastq
+│   │   ├── SRAEXAMPLE_R1.fastq
+│   │   └── SRAEXAMPLE_R2.fastq
+│   └── reference
+│       ├── GRCh38_noalt_as
+│       │   ├── GRCh38_noalt_as.1.bt2
+│       │   ├── GRCh38_noalt_as.2.bt2
+│       │   ├── GRCh38_noalt_as.3.bt2
+│       │   ├── GRCh38_noalt_as.4.bt2
+│       │   ├── GRCh38_noalt_as.rev.1.bt2
+│       │   └── GRCh38_noalt_as.rev.2.bt2
+│       ├── hg38_chrom_sizes
+│       └── hg38_chrom_sizes_binned_500k.bed
+├── environment.yml
+├── job.s
+├── LICENSE
+├── README.md
+├── scripts
+│   ├── count_effective_genome_size.sh
+│   ├── count_reads_in_bam.sh
+│   ├── mergeCount.R
+│   ├── remove_dup_column.R
+│   ├── search_files_run64.sh
+│   └── TMM.R
+└── snakefile_k27me3_k4
+```
+
+Before running the snakefile, make sure of the following
+
+1. In the example snakefile, "data/h3k27me3_h3k4/raw_fastq/" is the directory of the raw FASTQ files. Please adjust **EVERY INSTANCES** accordingly. You can do find and replace to safe time.
+
+2. Please adjust the naming of FASTQ files. Example: "data/h3k27me3_h3k4/raw_fastq/{sra}_1.fastq". In this case the forward read is denoted as "_1" and the file extension is .fastq (can be fastq.gz). This instance is in rule bowtie2 (line 72)
+
+3. Perform dry run (test run) with the following command
+
+```
+snakemake -np -s <snakefile_name>
+```
+
+Thats it! You have done all the hardwork and now you can just run following code and check in a few hours (or days depending on your data and resources).
+
+```
+snakemake --cores <num_of_cores> -s <snakefile_name>
+```
+
+If you are running the program in cluster, you can modify the sbatch file and run it with:
+
+```
+sbatch job.s
+```
+
+If there is an error, do not be afraid! Check a file called **errLog** and it will tell you where the error is. Should you require any help please raise an issue on GitHub or contact me through my email (muhammad.arifin@ucdconnect.ie).
+
+<p align="center">
+<img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/end.gif">
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
