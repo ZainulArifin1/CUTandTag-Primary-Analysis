@@ -168,7 +168,7 @@ You can see the schematic below:
 └── snakefile_k27me3_k4
 ```
 
-Before running the snakefile, make sure of the following for your ```snakefile```:
+Before running the snakefile, make sure of the following for your `snakefile`:
 
 1. In the example snakefile, "data/h3k27me3_h3k4/raw_fastq/" is the directory of the raw FASTQ files. Please adjust **EVERY INSTANCES** accordingly. You can do find and replace to safe time.
 
