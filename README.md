@@ -109,7 +109,7 @@ conda activate bioinformatics
 Grab a tea or whatever you want because this going to take a while.
 
 <p align="center">
-<img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/tree/master/img/kermit-the-frog-sip.gif">
+<img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/kermit-the-frog-sip.gif">
 </p>
 
 <!-- USAGE EXAMPLES -->
