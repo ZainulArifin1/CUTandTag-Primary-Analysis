@@ -129,7 +129,7 @@ Do not forget to unzip the folder. Put the indexed references inside the folder 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-If you have your FASTQ files ready, you must make sure first your folder is in the following format (**VERY IMPORTANT**).
+If you have your FASTQ files ready, ensure that your folder follows the specific structure detailed below (**VERY IMPORTANT**):
 
 <p align="center">
 <img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/Folder_Order.PNG">
@@ -180,6 +180,8 @@ Before running the snakefile, make sure of the following
 snakemake -np -s <snakefile_name>
 ```
 
+#### Running the snakefile
+
 Thats it! You have done all the hardwork and now you can just run following code and check in a few hours (or days depending on your data and resources).
 
 ```
@@ -192,7 +194,7 @@ If you are running the program in cluster, you can modify the sbatch file and ru
 sbatch job.s
 ```
 
-If there is an error, do not be afraid! Check a file called **errLog** and it will tell you where the error is. Should you require any help please raise an issue on GitHub or contact me through my email (muhammad.arifin@ucdconnect.ie).
+If there is an error, do not be afraid! Check a file called **errLog** and it will tell you where the error is. Should you require any help, please raise an issue on GitHub or contact me through my email at muhammad.arifin@ucdconnect.ie.
 
 <p align="center">
 <img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/end.gif">
