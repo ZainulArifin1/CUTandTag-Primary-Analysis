@@ -162,7 +162,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Muhammad Zainul Arifin
+Muhammad Zainul Arifin \n
 PhD Student, University College Dublin
 
 * Twitter: [@SaintZainn](https://twitter.com/SaintZainn)
