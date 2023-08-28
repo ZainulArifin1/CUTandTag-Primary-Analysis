@@ -162,9 +162,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Muhammad Zainul Arifin
+PhD Student, University College Dublin
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+* Twitter: [@SaintZainn](https://twitter.com/SaintZainn)
+* Email: muhammad.arifin@ucdconnect.ie
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,7 +175,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgment
 
-I would like to thank [the Dey Lab](https://deylab.com/members/) for the opportunity to work on the project which culminates in the creation of this GitHub repository.
+I am grateful to the [Dey Lab](https://deylab.com/members/) for affording me the opportunity to contribute to the project that has led to the establishment of this GitHub repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
