@@ -106,7 +106,11 @@ conda activate bioinformatics
 * snakemake=6.0.5
 * snakemake-minimal=6.0.5
 
+Grab a tea or whatever you want because this going to take a while.
 
+<p align="center">
+<img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/master/img/kermit-the-frog-sip.gif">
+</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
