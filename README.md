@@ -6,23 +6,21 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
-  <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+        <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
+        <a href="#getting-started">Getting Started</a>
+        <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-      </ul>
+        </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
 </details>
 
 
@@ -44,7 +42,7 @@ The following snakefile and supporting scripts are designed to process FASTQ fil
 
 Steps involving quality filtering and normalization is done to correct for read depth and signal-to-noise ratio bias.
 
-!! IMPORTANT !!
+!! IMPORTANT !!  
 Reads duplicate removal with Picard is not done in this workflow as CUT&Tag duplicates are likely to be real reads.
 
 <!-- GETTING STARTED -->
@@ -63,7 +61,6 @@ git clone git@github.com:ZainulArifin1/CUTandTag-Primary-Analysis.git
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
