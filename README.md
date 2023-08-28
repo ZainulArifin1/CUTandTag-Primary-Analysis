@@ -132,7 +132,7 @@ Do not forget to unzip the folder. Put the indexed references inside the folder 
 If you have your FASTQ files ready, you must make sure first your folder is in the following format (**VERY IMPORTANT**).
 
 <p align="center">
-<img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/Folder_Order.png">
+<img src="https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis/blob/master/img/Folder_Order.PNG">
 </p>
 
 You can see the schematic below:
