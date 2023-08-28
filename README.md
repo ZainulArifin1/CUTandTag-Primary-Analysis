@@ -12,7 +12,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -48,9 +47,9 @@ Reads duplicate removal with Picard is not done in this workflow as CUT&Tag dupl
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Clone the repo to your local folder with:
+Clone the repository to your local folder with:
 
-```sh
+```
 git clone https://github.com/ZainulArifin1/CUTandTag-Primary-Analysis.git
 
 or with SSH key
@@ -58,33 +57,54 @@ or with SSH key
 git clone git@github.com:ZainulArifin1/CUTandTag-Primary-Analysis.git
 ```
 
-
 ### Prerequisites
 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+To ensure a consistent and isolated environment for your bioinformatics project, you will need to install the required packages and libraries using either Conda or Mamba package managers. While both options are viable, I recommend using Mamba due to its superior speed and reliability.
 
-### Installation
+#### Using Mamba (Recommended)
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Mamba is a faster and more efficient alternative to Conda. Follow these steps to create and activate your environment using Mamba:
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Open your Linux terminal or WSL for Windows user.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+2. Navigate to the directory containing the project's environment.yml file.
+
+3. Run the following command to create the environment:
+
+```
+mamba env create -f environment.yml
+mamba activate bioinformatics
+```
+
+#### Using Conda (Alternative)
+
+If you prefer to use Conda, you can achieve the same environment setup using these steps:
+
+1. Open your Linux terminal or WSL for Windows user.
+
+2. Navigate to the directory containing the project's environment.yml file.
+
+3. Run the following command to create the environment:
+
+```
+conda env create -f environment.yml
+conda activate bioinformatics
+```
+
+#### Important packages used in this workflow:
+
+* bowtie2=2.5.1
+* fastqc=0.12.1
+* multiqc=1.15
+* deeptools=3.5.1
+* bedtools=2.31.0
+* subread=2.0.6
+* macs2=2.2.9.1
+* samtools=1.17
+* bioconductor-edger=3.40.0
+* r-tidyverse=1.3.2
+* snakemake=6.0.5
+* snakemake-minimal=6.0.5
 
 
 
