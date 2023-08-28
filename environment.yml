@@ -1,4 +1,4 @@
-name: bioinformatics
+name: cutandtag
 channels:
   - conda-forge
   - bioconda

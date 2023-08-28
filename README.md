@@ -74,7 +74,7 @@ Mamba is a faster and more efficient alternative to Conda. Follow these steps to
 
 ```
 mamba env create -f environment.yml
-mamba activate bioinformatics
+mamba activate cutandtag
 ```
 
 #### Using Conda (Alternative)
@@ -89,7 +89,7 @@ If you prefer to use Conda, you can achieve the same environment setup using the
 
 ```
 conda env create -f environment.yml
-conda activate bioinformatics
+conda activate cutandtag
 ```
 
 #### Important packages used in this workflow:
